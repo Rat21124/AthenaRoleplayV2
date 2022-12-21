@@ -1,0 +1,505 @@
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Athena Roleplay V2", "Ocean")
+
+local Tab = Window:NewTab("Autos Inspawnen")
+local TabSection = Tab:NewSection("Autos")
+
+TabSection:NewButton("Tesla Roadster 2020", "Zet de auto in uw garage", function()
+    local args = {
+    [1] = "Tesla Roadster 2020",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("Rolls Royce Ghost 2021", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "Rolls Royce Ghost 2021",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("Range Rover Evoque 2019", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "Range Rover Evoque 2019",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("Mclaren 675LT", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "Mclaren 675LT",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("Mclaren 600LT", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "Mclaren 600LT",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("Lamborghini Aventador V1", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "Lamborghini Aventador V1",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("Lamborghini Aventador", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "Lamborghini Aventador",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("BMW M4 G82 2021", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "BMW M4 G82 2021",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("2019 Mclaren 600LT", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "2019 Mclaren 600LT",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("Lamborghini SVJ", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "Lamborghini SVJ",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("Mclaren F1", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "Mclaren F1",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("2013 Mclaren P1", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "2013 Mclaren P1",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+TabSection:NewButton("2021 Bentley Mulliner Bacalar", "Zet de auto in uw garage", function()
+local args = {
+    [1] = "2021 Bentley Mulliner Bacalar",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+end)
+
+local Tab = Window:NewTab("Onderwereld")
+local TabSection = Tab:NewSection("Gang BlackMarket")
+
+TabSection:NewToggle("Gang Blackmarket Openen/Sluiten", "Opent de gang blackmarket", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui["Gang blackmarket"].Blackmarket.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui["Gang blackmarket"].Blackmarket.Enabled = false
+    end 
+end)
+
+local TabSection = Tab:NewSection("Normale BlackMarket")
+
+TabSection:NewToggle("Blackmarket Openen/Sluiten", "Opent de blackmarket", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.Blackmarket.Blackmarket.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.Blackmarket.Blackmarket.Enabled = false
+    end 
+end)
+
+local TabSection = Tab:NewSection("Bivak en KogelwerendVest")
+
+TabSection:NewToggle("Bivak Aandoen/Afdoen", "Doet de bivak op en af", function(state)
+    if state then 
+    local args = {
+    [1] = "Equip",
+    [2] = "TextButton",
+    [3] = "Head"
+}
+
+game:GetService("ReplicatedStorage").Gamepassvest.d:FireServer(unpack(args))
+    else 
+local args = {
+    [1] = "UnEquip",
+    [2] = "TextButton",
+    [3] = "d"
+}
+
+game:GetService("ReplicatedStorage").Gamepassvest.d:FireServer(unpack(args))
+    end 
+end)
+
+TabSection:NewToggle("Kogelwerend Vest Aandoen/Uitdoen.", "Doet de Kogelwerendvest op en af", function(state)
+    if state then 
+local args = {
+    [1] = "Equip",
+    [2] = "TextButton",
+    [3] = "Torso"
+}
+game:GetService("ReplicatedStorage").Gamepassvest.Gamepassvest:FireServer(unpack(args))
+    else 
+local args = {
+    [1] = "UnEquip",
+    [2] = "TextButton",
+    [3] = "Gamepassvest"
+}
+game:GetService("ReplicatedStorage").Gamepassvest.Gamepassvest:FireServer(unpack(args))
+    end 
+end)
+
+
+
+
+local TabSection = Tab:NewSection("Kluis Openen/Sluiten")
+
+TabSection:NewToggle("Kluis openen/Sluiten (BETA)", "Opent je kluis", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.Kluis.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.Kluis.Enabled = false
+    end 
+end)
+
+local TabSection = Tab:NewSection("Vest en Bivak")
+
+TabSection:NewToggle("Vest en Bivak Menu Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui["UI'S"].Gamepassvest.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui["UI'S"].Gamepassvest.Enabled = false
+    end 
+end)
+
+local Tab = Window:NewTab("Overheid")
+local TabSection = Tab:NewSection("Lockers")
+
+TabSection:NewToggle("Undercover Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.Lockers.Undercover.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.Lockers.Undercover.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("DSI Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.Lockers.DSI.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.Lockers.DSI.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("Politie Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.Lockers.Politie.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.Lockers.Politie.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("KMar Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.Lockers.KMar.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.Lockers.KMar.Enabled = false
+    end 
+end)
+
+local TabSection = Tab:NewSection("SchietMelding (BETA)")
+
+TabSection:NewButton("Schietmelding Uitzetten", "Zet de schietmelding voor de politie uit.", function()
+game:GetService("Players").LocalPlayer.PlayerGui.melding.Disabled = true
+end)
+
+local Tab = Window:NewTab("Teleports")
+local TabSection = Tab:NewSection("Teleports")
+
+TabSection:NewButton("Cardealer (AntiCheat Bypass)", "Teleporteert uzelf naar de Cardealer.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-386.645752, 4.29884005, -470.434174, -0.999998093, 1.02927999e-07, -0.00196463289, 1.02914477e-07, 1, 6.9840298e-09, 0.00196463289, 6.7818271e-09, -0.999998093)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Appartementen (AntiCheat Bypass)", "Teleporteert uzelf naar de appartementen.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-225.962387, 3.48687315, -722.842346, 0.999894559, -9.08285145e-08, -0.0145194475, 9.13344707e-08, 1, 3.41835324e-08, 0.0145194475, -3.5506055e-08, 0.999894559)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Albert Heijn (AntiCheat Bypass)", "Teleporteert uzelf naar de Albert Heijn.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-42.5221786, 3.18321586, -582.512817, -0.999243736, 5.62897298e-11, 0.0388839655, -5.44745249e-10, 1, -1.54465472e-08, -0.0388839655, -1.54560471e-08, -0.999243736)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Albert Heijn 2 (AntiCheat Bypass)", "Teleporteert uzelf naar de Albert Heijn 2.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-703.924988, 3.10830736, 788.821716, 0.944138408, -9.05471609e-08, -0.329549164, 1.07221034e-07, 1, 3.24210738e-08, 0.329549164, -6.59445831e-08, 0.944138408)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Politie Bureau (AntiCheat Bypass)", "Teleporteert uzelf naar het Politie Bureau.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(164.059097, 3.11344481, -783.724487, -0.794790387, 9.15164922e-09, 0.606884003, 2.19735181e-08, 1, 1.36973322e-08, -0.606884003, 2.42218849e-08, -0.794790387)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Simpel Wonen (AntiCheat Bypass)", "Teleporteert uzelf naar Simpel Wonen.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-112.828247, 3.09169507, 94.0124969, -0.992297351, -2.2049786e-08, -0.123878948, -9.63826441e-09, 1, -1.00790025e-07, 0.123878948, -9.88196973e-08, -0.992297351)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Advocaten Bureau (AntiCheat Bypass)", "Teleporteert uzelf naar het Advocaten Bureau.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5.28277731, 3.0916934, 6.94496012, 0.946411967, -1.11500704e-07, -0.322961837, 1.04776447e-07, 1, -3.82058012e-08, 0.322961837, 2.31963093e-09, 0.946411967)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Haven (AntiCheat Bypass)", "Teleporteert uzelf naar de Haven.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1842.58875, 3.02478933, 893.618225, -0.842375398, 4.92041323e-08, -0.538891137, 8.24313275e-08, 1, -3.75474585e-08, 0.538891137, -7.60505685e-08, -0.842375398)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Ambulance Post (AntiCheat Bypass)", "Teleporteert uzelf naar de Ambulance Post.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(946.232727, 3.00072289, 1324.92334, -0.735319972, -1.13207861e-07, -0.677720129, -1.1036407e-07, 1, -4.72982222e-08, 0.677720129, 4.00166229e-08, -0.735319972)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Gevangenis (Buiten) (AntiCheat Bypass)", "Teleporteert uzelf naar de Gevangenis.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(599.65155, 3.10002255, 1319.10193, -0.942352772, 4.72695056e-08, 0.334621012, 5.95746563e-08, 1, 2.65101008e-08, -0.334621012, 4.49167992e-08, -0.942352772)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Gevangenis (Binnen) (AntiCheat Bypass)", "Teleporteert uzelf naar de Gevangenis.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(594.903503, 3.10002255, 1358.82812, -0.999932885, -1.03591447e-07, -0.0115866428, -1.0329623e-07, 1, -2.60780428e-08, 0.0115866428, -2.48794354e-08, -0.999932885)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("ING Bank (AntiCheat Bypass)", "Teleporteert uzelf naar de ING Bank.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-838.959534, 3.11344481, 2.69909453, -0.771631598, 8.42160564e-09, 0.636069715, 1.27727597e-08, 1, 2.25487806e-09, -0.636069715, 9.86430049e-09, -0.771631598)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("De Club (AntiCheat Bypass)", "Teleporteert uzelf naar de Club.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5684.99121, 13.1065693, 388.50708, -0.726030588, -3.64955355e-08, -0.687662423, 1.64701888e-08, 1, -7.04610201e-08, 0.687662423, -6.24827834e-08, -0.726030588)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Witwas (AntiCheat Bypass)", "(Kijk in de gele hooi)", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1305.17871, 1.30921173, 87.400032, -0.499959469, 0, 0.866048813, 0, 1, 0, -0.866048813, 0, -0.499959469)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Planten (AntiCheat Bypass)", "Teleporteert uzelf naar de Planten", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4103.7334, 1.77951431, -2126.50977, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Planten Bewerker (AntiCheat Bypass)", "Teleporteert uzelf naar de Planten Bewerker", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1219.08459, 3.0239706, 179.853607, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Planten Verkoop (AntiCheat Bypass)", "Teleporteert uzelf naar de Planten Verkoop", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(415.303223, 2.97660804, 479.530762, 0.171403289, 0, 0.98520112, 0, 1, 0, -0.98520112, 0, 0.171403289)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("Gang BlackMarket (AntiCheat Bypass)", "Teleporteert uzelf naar de Gang BlackMarket", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1215.99792, 0.712749004, 202.663788, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+TabSection:NewButton("BlackMarket (AntiCheat Bypass)", "Teleporteert uzelf naar de BlackMarket", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	wait(0.05)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-94.1452255, 0.98890686, -866.774353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	wait(0.05)
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+local Tab = Window:NewTab("Misc")
+local TabSection = Tab:NewSection("Misc")
+
+TabSection:NewToggle("Kofferbak Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.Kofferbak.KofferbakGui.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.Kofferbak.KofferbakGui.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("Ambulance Handschoenen Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui["UI'S"].AmbulanceHanschoenen.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui["UI'S"].AmbulanceHanschoenen.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("Ambulance Tas Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui["UI'S"].AmbulanceTas.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui["UI'S"].AmbulanceTas.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("DSI Menu Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui["UI'S"].DSIVEST.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui["UI'S"].DSIVEST.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("Winkel Menu Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.winkel.winkel.Enabled = true
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.winkel.winkel.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("DSI Kofferbak Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.DSIKOFFERBAK2.Enabled = true 
+    else 
+        game:GetService("Players").LocalPlayer.PlayerGui.DSIKOFFERBAK2.Enabled = false
+    end 
+end)
+
+TabSection:NewToggle("Rabobank Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.Rabobankgui.Enabled = true
+		game:GetService("Players").LocalPlayer.PlayerGui.Rabobankgui.voerpasin.Visible = true
+    else
+        game:GetService("Players").LocalPlayer.PlayerGui.Rabobankgui.Enabled = false
+		game:GetService("Players").LocalPlayer.PlayerGui.Rabobankgui.voerpasin.Visible = false
+    end 
+end)
+
+TabSection:NewToggle("HulpDiensten Radio Openen/Sluiten", "Opent het menu", function(state)
+    if state then 
+        game:GetService("Players").LocalPlayer.PlayerGui.RadioGui.Enabled = true
+    else
+        game:GetService("Players").LocalPlayer.PlayerGui.RadioGui.Enabled = false
+    end 
+end)
+
+local TabSection = Tab:NewSection("AFK")
+
+TabSection:NewButton("AFK aan", "Jezelf AFK geven", function()
+local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage").AFK:FireServer(unpack(args))
+end)
+
+TabSection:NewButton("AFK uit", "Jezelf AFK geven", function()
+local args = {
+    [1] = false
+}
+
+game:GetService("ReplicatedStorage").AFK:FireServer(unpack(args))
+end)
+
+TabSection:NewButton("AFK permanent weghalen.", "AFK uit zetten voor permanent.", function()
+game.Players.LocalPlayer.Character.AFKLocalScript:Destroy()
+end)
+
+local Tab = Window:NewTab("Geld Inspawnen")
+local TabSection = Tab:NewSection("Geld inspawnen.")
+
+
+TabSection:NewTextBox("Hoeveelheid:", "Geld Inspawnen.", function(txt)
+	   local args = {
+    [1] = "Tesla Roadster 2020",
+    [2] = 0
+}
+game:GetService("ReplicatedStorage").Remotes.BuyVehicleRE:FireServer(unpack(args))
+local args = {
+    [1] = "Tesla Roadster 2020",
+    [2] = txt
+}
+
+game:GetService("ReplicatedStorage").Remotes.SellVehicleRE:FireServer(unpack(args))
+end)
+
+local Tab = Window:NewTab("Credits")
+local TabSection = Tab:NewSection("Gemaakt door: ChapoK#1363")
+local TabSection = Tab:NewSection("Gebruik is op eigen verantwoordelijkheid.")
+local TabSection = Tab:NewSection("Leaken = Whitelist weg.")
